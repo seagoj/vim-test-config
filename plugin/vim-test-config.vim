@@ -1,6 +1,7 @@
+" plugin/vim-test-config.vim
+
 function! VagrantTransform(cmd) abort
-    " let vagrant_project = get(matchlist(s:cat('../../Vagrantfile'), '\vconfig\.vm.synced_folder ["''].+[''"], ["''](.+)[''"]'), 1)
-    let vagrant_project = "/vagrant/bonfyre_app"
+    let vagrant_project = '/vagrant/bonfyre_app'
     return 'vagrant ssh --command '.shellescape('cd '.vagrant_project.'; '.a:cmd)
 endfunction
 
